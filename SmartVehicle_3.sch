@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -31532,6 +31532,7 @@ Comus International, W. Gunther GmbH, Gunther Belgium</description>
 <part name="P+8" library="supply1" deviceset="+5V" device=""/>
 <part name="+3V9" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V10" library="supply1" deviceset="+3V3" device=""/>
+<part name="GND2" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -32270,7 +32271,7 @@ Comus International, W. Gunther GmbH, Gunther Belgium</description>
 </plain>
 <instances>
 <instance part="U3" gate="G$1" x="93.98" y="76.2"/>
-<instance part="D10" gate="G$1" x="147.32" y="106.68" rot="R270"/>
+<instance part="D10" gate="G$1" x="149.86" y="104.14" rot="R180"/>
 <instance part="IC4" gate="G$1" x="121.92" y="134.62"/>
 <instance part="C14" gate="G$1" x="147.32" y="139.7"/>
 <instance part="J1" gate="G$1" x="53.34" y="83.82"/>
@@ -32282,7 +32283,7 @@ Comus International, W. Gunther GmbH, Gunther Belgium</description>
 <instance part="GND21" gate="1" x="53.34" y="71.12"/>
 <instance part="IC8" gate="G$1" x="162.56" y="81.28"/>
 <instance part="V+4" gate="G$1" x="139.7" y="86.36" rot="R270"/>
-<instance part="C15" gate="G$1" x="147.32" y="81.28"/>
+<instance part="C15" gate="G$1" x="144.78" y="81.28"/>
 <instance part="GND35" gate="1" x="124.46" y="114.3" rot="R180"/>
 <instance part="RX3" gate="G$1" x="177.8" y="68.58" rot="R90"/>
 <instance part="TX3" gate="G$1" x="177.8" y="63.5" rot="R90"/>
@@ -32294,9 +32295,10 @@ Comus International, W. Gunther GmbH, Gunther Belgium</description>
 <instance part="C30" gate="G$1" x="144.78" y="154.94" rot="R180"/>
 <instance part="R28" gate="G$1" x="139.7" y="96.52"/>
 <instance part="FRAME3" gate="G$1" x="0" y="0"/>
-<instance part="P+8" gate="1" x="154.94" y="116.84" rot="R270"/>
+<instance part="P+8" gate="1" x="195.58" y="111.76" rot="R270"/>
 <instance part="+3V9" gate="G$1" x="154.94" y="149.86" rot="R270"/>
 <instance part="+3V10" gate="G$1" x="116.84" y="114.3"/>
+<instance part="GND2" gate="1" x="144.78" y="68.58"/>
 </instances>
 <busses>
 </busses>
@@ -32304,17 +32306,20 @@ Comus International, W. Gunther GmbH, Gunther Belgium</description>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="V+4" gate="G$1" pin="TP"/>
-<wire x1="142.24" y1="86.36" x2="147.32" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="86.36" x2="144.78" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="C15" gate="G$1" pin="1"/>
-<wire x1="147.32" y1="86.36" x2="149.86" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="86.36" x2="147.32" y2="83.82" width="0.1524" layer="91"/>
-<junction x="147.32" y="86.36"/>
+<wire x1="144.78" y1="86.36" x2="149.86" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="86.36" x2="144.78" y2="83.82" width="0.1524" layer="91"/>
+<junction x="144.78" y="86.36"/>
 <label x="144.78" y="86.36" size="1.778" layer="95" rot="R90"/>
-<wire x1="149.86" y1="86.36" x2="149.86" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="93.98" x2="180.34" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="93.98" x2="180.34" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="86.36" x2="149.86" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="78.74" x2="180.34" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="IC8" gate="G$1" pin="OUT"/>
-<wire x1="180.34" y1="86.36" x2="175.26" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="78.74" x2="175.26" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="D10" gate="G$1" pin="A"/>
+<wire x1="152.4" y1="104.14" x2="180.34" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="104.14" x2="180.34" y2="78.74" width="0.1524" layer="91"/>
+<junction x="180.34" y="78.74"/>
 </segment>
 <segment>
 <pinref part="IC4" gate="G$1" pin="VCC"/>
@@ -32417,9 +32422,10 @@ Comus International, W. Gunther GmbH, Gunther Belgium</description>
 </segment>
 <segment>
 <pinref part="IC8" gate="G$1" pin="GND"/>
-<wire x1="147.32" y1="76.2" x2="152.4" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="76.2" x2="152.4" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="C15" gate="G$1" pin="2"/>
-<wire x1="147.32" y1="76.2" x2="147.32" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="76.2" x2="144.78" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -32530,15 +32536,11 @@ Comus International, W. Gunther GmbH, Gunther Belgium</description>
 </net>
 <net name="+5V" class="0">
 <segment>
-<pinref part="D10" gate="G$1" pin="A"/>
-<wire x1="147.32" y1="109.22" x2="147.32" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="C14" gate="G$1" pin="1"/>
-<label x="185.42" y="83.82" size="1.778" layer="95" rot="R180"/>
 <wire x1="147.32" y1="147.32" x2="147.32" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="96.52" x2="185.42" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="111.76" x2="185.42" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="147.32" x2="147.32" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="111.76" x2="185.42" y2="111.76" width="0.1524" layer="91"/>
 <junction x="185.42" y="111.76"/>
 <pinref part="IC8" gate="G$1" pin="IN"/>
 <wire x1="152.4" y1="86.36" x2="152.4" y2="96.52" width="0.1524" layer="91"/>
@@ -32546,11 +32548,8 @@ Comus International, W. Gunther GmbH, Gunther Belgium</description>
 <pinref part="IC8" gate="G$1" pin="!EN"/>
 <wire x1="152.4" y1="81.28" x2="152.4" y2="86.36" width="0.1524" layer="91"/>
 <junction x="152.4" y="86.36"/>
-<label x="193.04" y="101.6" size="1.778" layer="95" rot="R270"/>
 <pinref part="P+8" gate="1" pin="+5V"/>
-<wire x1="147.32" y1="111.76" x2="147.32" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="116.84" x2="152.4" y2="116.84" width="0.1524" layer="91"/>
-<junction x="147.32" y="111.76"/>
+<wire x1="193.04" y1="111.76" x2="185.42" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -32835,8 +32834,8 @@ Comus International, W. Gunther GmbH, Gunther Belgium</description>
 <instance part="K7" gate="1" x="45.72" y="83.82"/>
 <instance part="K7" gate="2" x="63.5" y="83.82"/>
 <instance part="K7" gate="3" x="63.5" y="68.58"/>
-<instance part="X9" gate="-1" x="76.2" y="73.66"/>
-<instance part="X9" gate="-2" x="76.2" y="88.9"/>
+<instance part="X9" gate="-1" x="76.2" y="81.28"/>
+<instance part="X9" gate="-2" x="76.2" y="93.98"/>
 <instance part="R30" gate="G$1" x="114.3" y="127"/>
 <instance part="R31" gate="G$1" x="124.46" y="119.38" rot="R90"/>
 <instance part="GND28" gate="1" x="124.46" y="106.68"/>
@@ -33131,24 +33130,6 @@ Comus International, W. Gunther GmbH, Gunther Belgium</description>
 <label x="7.62" y="73.66" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$56" class="0">
-<segment>
-<pinref part="K7" gate="2" pin="O"/>
-<pinref part="X9" gate="-2" pin="S"/>
-<wire x1="73.66" y1="88.9" x2="68.58" y2="88.9" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$59" class="0">
-<segment>
-<pinref part="K7" gate="3" pin="S"/>
-<wire x1="58.42" y1="73.66" x2="55.88" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="73.66" x2="55.88" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="78.74" x2="71.12" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="78.74" x2="71.12" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="X9" gate="-1" pin="S"/>
-<wire x1="71.12" y1="73.66" x2="73.66" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$60" class="0">
 <segment>
 <pinref part="D13" gate="G$1" pin="A"/>
@@ -33311,6 +33292,15 @@ Comus International, W. Gunther GmbH, Gunther Belgium</description>
 <wire x1="53.34" y1="81.28" x2="63.5" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$32" class="0">
+<segment>
+<pinref part="K7" gate="2" pin="S"/>
+<wire x1="58.42" y1="88.9" x2="55.88" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="88.9" x2="55.88" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="93.98" x2="73.66" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="X9" gate="-2" pin="S"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -33325,8 +33315,8 @@ Comus International, W. Gunther GmbH, Gunther Belgium</description>
 <instance part="P+2" gate="1" x="33.02" y="157.48"/>
 <instance part="D2" gate="G$1" x="40.64" y="152.4"/>
 <instance part="FRAME4" gate="G$1" x="0" y="2.54"/>
-<instance part="X1" gate="-1" x="27.94" y="134.62" rot="R180"/>
-<instance part="X1" gate="-2" x="27.94" y="152.4" rot="R180"/>
+<instance part="X1" gate="-1" x="30.48" y="152.4" rot="R180"/>
+<instance part="X1" gate="-2" x="33.02" y="134.62" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -33345,10 +33335,8 @@ Comus International, W. Gunther GmbH, Gunther Belgium</description>
 <wire x1="53.34" y1="139.7" x2="53.34" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="134.62" x2="73.66" y2="134.62" width="0.1524" layer="91"/>
 <junction x="73.66" y="134.62"/>
-<wire x1="53.34" y1="134.62" x2="30.48" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="X1" gate="-1" pin="S"/>
-<junction x="30.48" y="134.62"/>
-<junction x="53.34" y="134.62"/>
+<pinref part="X1" gate="-2" pin="S"/>
+<wire x1="53.34" y1="134.62" x2="35.56" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -33368,10 +33356,9 @@ Comus International, W. Gunther GmbH, Gunther Belgium</description>
 <label x="30.48" y="154.94" size="1.778" layer="95"/>
 <pinref part="P+2" gate="1" pin="+12V"/>
 <wire x1="33.02" y1="152.4" x2="33.02" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="152.4" x2="30.48" y2="152.4" width="0.1524" layer="91"/>
-<junction x="33.02" y="152.4"/>
 <pinref part="D2" gate="G$1" pin="A"/>
-<pinref part="X1" gate="-2" pin="S"/>
+<pinref part="X1" gate="-1" pin="S"/>
+<junction x="33.02" y="152.4"/>
 </segment>
 </net>
 <net name="N$24" class="0">
